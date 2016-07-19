@@ -1,0 +1,36 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="" en>
+
+<head>
+    <meta charset="utf-8">
+    <title>listen</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main/style_home_page.css' %}">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Archivo+Narrow:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day' rel='stylesheet' type='text/css'>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+</head>
+
+<body>
+    <div align="center" class="container">
+        <div id="main_title">Audios</div>
+        <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+        <video id="video_bckg" autoplay loop>
+            <source src="{% static 'main/bckg-film.mp4' %}" type="video/mp4">
+        </video>
+        <!-- <form class="form-inline">
+            <div class="form-group">
+                <input type="email" class="form-control" id="login_email" placeholder="Email">
+                <input type="password" class="form-control" id="login_pass" placeholder="Password">
+                <button type="submit" class="btn btn-default">Sign In</button>
+            </div>
+        </form> -->
+        {{form}}
+    </div>
+</body>
+
+</html>
