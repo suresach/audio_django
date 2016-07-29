@@ -1,5 +1,6 @@
 from django import forms
 
-class UserForm(forms.Form):
-    name = forms.CharField(max_length=25)
-    password = forms.CharField(max_length=23)
+class ContactForm(forms.Form):
+    subject = forms.CharField()
+    email = forms.EmailField(required=False)
+    message = forms.CharField(widget=forms.Textarea)
