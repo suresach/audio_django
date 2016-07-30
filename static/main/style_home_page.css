@@ -10,22 +10,28 @@
 }
 
 #main_title {
-    font-family: 'Dawning of a New Day', cursive;
+    font-family: 'Poiret One', cursive;
     position: relative;
     font-size: 8vw;
     z-index: 2;
     color: white;
-    top: 70%;
+    top: 8%;
 }
 
-#video_bckg {
-    min-height: 100%;
-    min-width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+#full_page{
+    background-image: url(home_page_bckg.jpg);
+    background-size: cover;
+    height: 100vh;
 }
-
 .form-inline{
 	position: relative;
+}
+
+.symbol{
+    font-size: 3vw;
+    vertical-align: super;
+}
+#login{
+    top: 6vw;
+    z-index: 3;
 }

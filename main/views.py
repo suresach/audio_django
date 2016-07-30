@@ -1,9 +1,17 @@
 from django.shortcuts import render
-from .forms import ContactForm
+from .forms import formLogin
 from django.http import HttpResponse
-
+ 
 def index(request):
-	return render(request, 'main/home_page.html')
+    form_login = formLogin(auto_id=False)
+    return render(request, 'main/home_page.html', {'form_login':form_login})
+
+def verify_login(request):
+    if 'email' in request.POST:
+        message = 'You searched for: %r' % request.POST['email' ]
+        message += "and: " + request.POST['password'] 
+        return HttpResponse(message)
+
 
 def search_form(request):
     return render(request, 'main/search_form.html')

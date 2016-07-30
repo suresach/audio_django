@@ -1,6 +1,9 @@
 from django import forms
 
-class ContactForm(forms.Form):
-    subject = forms.CharField()
-    email = forms.EmailField(required=False)
-    message = forms.CharField(widget=forms.Textarea)
+class formLogin(forms.Form):
+    email = forms.EmailField(widget=forms.TextInput(attrs={'class': 'form-control',
+     'placeholder':'Email'}),label='')
+    password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control',
+     'placeholder':'Password'}),label='')
+    # widgets = {'password': forms.PasswordInput(),}
+    
